@@ -39,6 +39,7 @@ class User extends Authenticatable
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
+        'enable'
     ];
 
     /**
@@ -58,4 +59,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function primary_company()
+    {
+        return $this->belongsTo(PrimaryCompany::class);
+    }
+    
+    public function access_types()
+    {
+        return $this->belongsToMany(AccessType::class);
+    } 
 }
