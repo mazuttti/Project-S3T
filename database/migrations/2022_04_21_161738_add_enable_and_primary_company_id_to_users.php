@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('enable')->default(true);
-            $table->foreignId('primary_company_id')->constrained();
+            $table->foreignId('primary_company_id')->nullable()->constrained();
         });
     }
 

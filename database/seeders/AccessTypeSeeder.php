@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\AccessType;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class AccessTypeSeeder extends Seeder
 {
@@ -15,7 +15,7 @@ class AccessTypeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('access_types')->insert([
+        AccessType::insert([
             ['name' => 'master'],
             ['name' => 'admin'],
             ['name' => 'reception'],
