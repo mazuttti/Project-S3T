@@ -26,7 +26,7 @@ class PrimaryCompanyFactory extends Factory
         return [
             'corporate_name' => $this->faker->name(),
             'fantasy_name' => $this->faker->company(),
-            'cnpj' => $this->faker->numerify('##.###.###/000#-##'),
+            'cnpj' => $this->faker->numerify('##.###.###/000#-##')
         ];
     }
 }

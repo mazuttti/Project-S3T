@@ -19,15 +19,16 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'Admaster',
-            'email' => 'lucas@gmail.com',
-            'password' => Hash::make('123')
+            'name' => 'Admin Master',
+            'email' => 'admin.master@email.com',
+            'password' => Hash::make('123'),
+            'primary_company_id' => 1
         ]);
 
         User::factory(45)->state(new Sequence(
             fn ($sequence) => [
                 'name' => 'Name '.$sequence->index,
-                'primary_company_id' => PrimaryCompany::all()->random()
+                'primary_company_id' => PrimaryCompany::all()->where('id', '!=', 1)->random()
             ]
         ))->create();
     }

@@ -21,9 +21,10 @@ class AccessTypeSeeder extends Seeder
             ['name' => 'reception'],
             ['name' => 'nursing'],
             ['name' => 'radiology'],
+            ['name' => 'laboratory'],
             ['name' => 'audiometry'],
             ['name' => 'doctor'],
-            ['name' => 'accounting'],
+            ['name' => 'accountancy'],
             ['name' => 'call_screen']
         ]);
     }

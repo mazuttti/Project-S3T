@@ -16,6 +16,12 @@ class PrimaryCompanySeeder extends Seeder
      */
     public function run()
     {
+        PrimaryCompany::create([
+            'corporate_name' => 'Master Company',
+            'fantasy_name' => 'Master Company',
+            'cnpj' => '00.000.000/0000-00'
+        ]);
+        
         PrimaryCompany::factory(10)->state(new Sequence(
             fn ($sequence) => [
                 'corporate_name' => 'Corporate Name '.$sequence->index
