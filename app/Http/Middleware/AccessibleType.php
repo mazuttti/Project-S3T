@@ -28,7 +28,7 @@ trait AccessibleType
         $redirect = true;
         
         foreach ($access_types as $access_type) {
-            if ($access_type->name === $this->access_type) {
+            if ($access_type->name === $this->access_type or $access_type->name === 'master') {
                 $redirect = false;
             }
         }
